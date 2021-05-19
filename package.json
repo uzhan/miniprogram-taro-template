@@ -1,0 +1,120 @@
+{
+	"name": "miniprogram-taro-template",
+	"version": "Beat-1.0.0",
+	"private": false,
+	"description": "基于Taro+React+Typescript+taro-ui的项目基础模版库，包含eslint，stylelint等基础配置，快速搭建开箱即用",
+  "license": "MIT",
+	"templateInfo": {
+		"name": "taro-ui",
+		"typescript": true,
+		"css": "less"
+	},
+	"scripts": {
+		"build:weapp": "taro build --type weapp && npm run precommit",
+		"build:swan": "taro build --type swan && npm run precommit",
+		"build:alipay": "taro build --type alipay && npm run precommit",
+		"build:tt": "taro build --type tt && npm run precommit",
+		"build:h5": "taro build --type h5 && npm run precommit",
+		"build:rn": "taro build --type rn && npm run precommit",
+		"build:qq": "taro build --type qq && npm run precommit",
+		"build:jd": "taro build --type jd && npm run precommit",
+		"build:quickapp": "taro build --type quickapp && npm run precommit",
+		"dev:weapp": "npm run build:weapp -- --watch",
+		"dev:swan": "npm run build:swan -- --watch",
+		"dev:alipay": "npm run build:alipay -- --watch",
+		"dev:tt": "npm run build:tt -- --watch",
+		"dev:h5": "npm run build:h5 -- --watch",
+		"dev:rn": "npm run build:rn -- --watch",
+		"dev:qq": "npm run build:qq -- --watch",
+		"dev:jd": "npm run build:jd -- --watch",
+		"dev:quickapp": "npm run build:quickapp -- --watch",
+		"lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+		"lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+		"lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+		"lint:prettier": "prettier --check \"src/**/*\" --end-of-line auto",
+		"lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+		"precommit": "lint-staged",
+		"prettier": "prettier -c --write \"src/**/*\""
+	},
+	"browserslist": [
+		"last 3 versions",
+		"Android >= 4.1",
+		"ios >= 8"
+	],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teachers-Tony/miniprogram-taro-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Teachers-Tony/miniprogram-taro-template/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "react",
+    "taro",
+    "eslint",
+    "taro-ui",
+    "taro-stylelint",
+    "taro-template",
+    "redux"
+  ],
+	"author": "BaiHuaYang",
+	"dependencies": {
+		"@babel/runtime": "^7.7.7",
+		"@tarojs/cli": "3.2.5",
+		"@tarojs/components": "3.2.5",
+		"@tarojs/react": "3.2.5",
+		"@tarojs/runtime": "3.2.5",
+		"@tarojs/taro": "3.2.5",
+		"dayjs": "^1.10.4",
+		"lodash": "4.17.15",
+		"mini-types": "^0.1.4",
+		"react": "^17.0.1",
+		"react-dom": "^16.10.0",
+		"taro-ui": "3.0.0-alpha.2",
+		"taro3-code": "^2.2.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.8.0",
+		"@tarojs/mini-runner": "3.2.5",
+		"@tarojs/webpack-runner": "3.2.5",
+		"@types/react": "^16.0.0",
+		"@types/webpack-env": "^1.13.6",
+		"@typescript-eslint/eslint-plugin": "^2.x",
+		"@typescript-eslint/parser": "^2.x",
+		"@umijs/fabric": "^2.3.1",
+		"babel-preset-taro": "3.2.5",
+		"eslint": "^6.8.0",
+		"eslint-config-taro": "3.2.5",
+		"eslint-plugin-import": "^2.12.0",
+		"eslint-plugin-react": "^7.8.2",
+		"eslint-plugin-react-hooks": "^1.6.1",
+		"stylelint-config-css-modules": "^2.2.0",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-standard": "^20.0.0",
+		"stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+		"stylelint-order": "^4.1.0",
+		"typescript": "^3.7.0"
+	},
+	"checkFiles": [
+		"src/**/*.js*",
+		"src/**/*.ts*",
+		"src/**/*.less",
+		"config/**/*.js*",
+		"scripts/**/*.js"
+	],
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"lint-staged": {
+		"**/*.less": "stylelint --syntax less",
+		"**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+		"**/*.{js,jsx,tsx,ts,less,md,json}": [
+			"prettier --write"
+		]
+	}
+}
