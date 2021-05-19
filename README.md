@@ -6,7 +6,7 @@
 ```
 ├── LICENSE
 ├── README.md
-├── babel.config.js  //babel配置
+├── babel.config.js  （babel配置）
 ├── config 
 │   ├── dev.js
 │   ├── index.js
@@ -18,22 +18,22 @@
 │   ├── app.config.ts
 │   ├── app.less
 │   ├── app.ts
-│   ├── assets  // 静态资源
+│   ├── assets  （静态资源）
 │   │   └── icon.png
-│   ├── components // 公共组件
+│   ├── components （公共组件）
 │   ├── index.html
 │   ├── pages
 │   │   └── index
-│   │       ├── index.config.ts // 页面配置
-│   │       ├── index.less  // 页面样式
-│   │       ├── index.tsx // 页面程序
-│   │       └── service.ts  // 页面请求
-│   ├── services  // 全局请求
-│   ├── typings.d.ts // ts定义文件
+│   │       ├── index.config.ts （页面配置）
+│   │       ├── index.less  （页面样式）
+│   │       ├── index.tsx （页面程序）
+│   │       └── service.ts  （页面请求）
+│   ├── services  （全局请求）
+│   ├── typings.d.ts （ts定义文件）
 │   └── utils（工具文件）
-│       ├── index.ts  // 包含图片下载等工具函数
-│       └── request.ts  // 统一封装API请求
-└── tsconfig.json // TS config
+│       ├── index.ts  （包含图片下载等工具函数）
+│       └── request.ts  （统一封装API请求）
+└── tsconfig.json （TS config）
 
 ```
 
