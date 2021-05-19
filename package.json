@@ -3,7 +3,7 @@
 	"version": "1.1.0",
 	"private": false,
 	"description": "基于Taro+React+Typescript+taro-ui的项目基础模版库，包含eslint，stylelint等基础配置，快速搭建开箱即用",
-  "license": "MIT",
+	"license": "MIT",
 	"templateInfo": {
 		"name": "taro-ui",
 		"typescript": true,
@@ -41,27 +41,27 @@
 		"Android >= 4.1",
 		"ios >= 8"
 	],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Teachers-Tony/miniprogram-taro-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Teachers-Tony/miniprogram-taro-template/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "keywords": [
-    "react",
-    "taro",
-    "eslint",
-    "taro-ui",
-    "taro-stylelint",
-    "taro-template",
-    "redux"
-  ],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Teachers-Tony/miniprogram-taro-template.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Teachers-Tony/miniprogram-taro-template/issues"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"keywords": [
+		"react",
+		"taro",
+		"eslint",
+		"taro-ui",
+		"taro-stylelint",
+		"taro-template",
+		"redux"
+	],
 	"author": "BaiHuaYang",
 	"dependencies": {
 		"@babel/runtime": "^7.7.7",
@@ -93,6 +93,7 @@
 		"eslint-plugin-import": "^2.12.0",
 		"eslint-plugin-react": "^7.8.2",
 		"eslint-plugin-react-hooks": "^1.6.1",
+		"lint-staged": "^11.0.0",
 		"stylelint-config-css-modules": "^2.2.0",
 		"stylelint-config-prettier": "^8.0.2",
 		"stylelint-config-standard": "^20.0.0",
@@ -115,7 +116,7 @@
 		"**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
 		"**/*.{js,jsx,tsx,ts,less,md,json}": [
 			"prettier --write",
-      "git add"
+			"git add"
 		]
 	}
 }
