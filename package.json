@@ -1,6 +1,6 @@
 {
 	"name": "miniprogram-taro-template",
-	"version": "Beat-1.0.0",
+	"version": "1.1.0",
 	"private": false,
 	"description": "基于Taro+React+Typescript+taro-ui的项目基础模版库，包含eslint，stylelint等基础配置，快速搭建开箱即用",
   "license": "MIT",
