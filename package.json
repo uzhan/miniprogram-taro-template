@@ -10,15 +10,15 @@
 		"css": "less"
 	},
 	"scripts": {
-		"build:weapp": "npm run lint && taro build --type weapp",
-		"build:swan": "npm run lint && taro build --type swan",
-		"build:alipay": "npm run lint && taro build --type alipay",
-		"build:tt": "npm run lint && taro build --type tt",
-		"build:h5": "npm run lint && taro build --type h5",
-		"build:rn": "npm run lint && taro build --type rn",
-		"build:qq": "npm run lint && taro build --type qq",
-		"build:jd": "npm run lint && taro build --type jd",
-		"build:quickapp": "npm run lint && taro build --type quickapp",
+		"build:weapp": "taro build --type weapp",
+		"build:swan": "taro build --type swan",
+		"build:alipay": "taro build --type alipay",
+		"build:tt": "taro build --type tt",
+		"build:h5": "taro build --type h5",
+		"build:rn": "taro build --type rn",
+		"build:qq": "taro build --type qq",
+		"build:jd": "taro build --type jd",
+		"build:quickapp": "taro build --type quickapp",
 		"dev:weapp": "npm run build:weapp -- --watch",
 		"dev:swan": "npm run build:swan -- --watch",
 		"dev:alipay": "npm run build:alipay -- --watch",
@@ -114,7 +114,7 @@
 	},
 	"lint-staged": {
 		"**/*.less": "stylelint --syntax less",
-		"**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+		"**/*.{js,jsx,ts,tsx}": "npm run lint",
 		"**/*.{js,jsx,tsx,ts,less,md,json}": [
 			"prettier --write",
 			"git add"
