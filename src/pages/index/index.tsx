@@ -6,15 +6,15 @@ import 'taro-ui/dist/style/components/button.scss'; // 按需引入
 import './index.less';
 
 export default class Index extends Component {
-  componentWillMount() {}
+  // componentWillMount() {}
 
-  componentDidMount() {}
+  // componentDidMount() {}
 
-  componentWillUnmount() {}
+  // componentWillUnmount() {}
 
-  componentDidShow() {}
+  // componentDidShow() {}
 
-  componentDidHide() {}
+  // componentDidHide() {}
 
   render() {
     return (

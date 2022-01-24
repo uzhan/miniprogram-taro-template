@@ -3,6 +3,7 @@ package.json
 .umi
 .umi-production
 /dist
+/config
 .dockerignore
 .DS_Store
 .eslintignore
@@ -19,4 +20,4 @@ LICENSE
 yarn-error.log
 .history
 CNAME
-/build
+/node_modules
