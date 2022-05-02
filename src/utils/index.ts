@@ -58,7 +58,7 @@ const downloadHttpImg = (httpImg: string) => {
   return new Promise((resolve) => {
     Taro.downloadFile({
       url: httpImg,
-      success: (res: { statusCode: number; tempFilePath: unknown; }) => {
+      success: (res: { statusCode: number; tempFilePath: unknown }) => {
         if (res.statusCode === 200) {
           resolve(res.tempFilePath);
         } else {

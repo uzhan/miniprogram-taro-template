@@ -1,13 +1,18 @@
 ## miniprogram-taro-template
-基于Taro+React的项目基础模版库，包含eslint，stylelint等基础配置，快速搭建开箱即用
 
+基于 Taro+React 的项目基础模版库，包含 eslint，stylelint 等基础配置，快速搭建开箱即用
+
+### UI 组件库
+
+使用@antmjs/vantui，由 taro 团队基于有赞 VantWeapp 开发的同时支持 Taro 和 React 的 UI 库。[官方文档链接](https://antm-js.gitee.io/vantui/#/home)
 
 ### 目录结构
+
 ```
 ├── LICENSE
 ├── README.md
 ├── babel.config.js  （babel配置）
-├── config 
+├── config
 │   ├── dev.js
 │   ├── index.js
 │   └── prod.js
@@ -37,7 +42,7 @@
 
 ```
 
-## Getting started
+### Getting started
 
 ```bash
 # clone the project
@@ -53,7 +58,7 @@ yarn install
 yarn dev:weapp/h5/alipay/...
 ```
 
-## Build
+### Build
 
 ```bash
 
@@ -61,7 +66,15 @@ yarn dev:weapp/h5/alipay/...
 yarn build:prod
 ```
 
-## License
+### 其他注意事项
+
+需要注意开发者工具的项目设置：
+
+- 需要设置关闭 ES6 转 ES5 功能，开启可能报错
+- 需要设置关闭上传代码时样式自动补全，开启可能报错
+- 需要设置关闭代码压缩上传，开启可能报错
+
+### License
 
 [MIT](https://github.com/Teachers-Tony/miniprogram-taro-template/blob/main/LICENSE)
 
