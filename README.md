@@ -46,7 +46,7 @@
 
 ```bash
 # clone the project
-git clone https://github.com/Teachers-Tony/miniprogram-taro-template.git
+git clone https://github.com/uzhan/miniprogram-taro-template.git
 
 # enter the project directory
 cd miniprogram-taro-template
@@ -76,6 +76,6 @@ yarn build:prod
 
 ### License
 
-[MIT](https://github.com/Teachers-Tony/miniprogram-taro-template/blob/main/LICENSE)
+[MIT](https://github.com/uzhan/miniprogram-taro-template/blob/main/LICENSE)
 
 Copyright (c) 2021-present BaiHuaYang
