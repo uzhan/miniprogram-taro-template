@@ -113,6 +113,7 @@
 		"eslint-plugin-react": "^7.21.5",
 		"eslint-plugin-react-hooks": "^4.1.2",
 		"eslint-plugin-unicorn": "^20.0.0",
+		"compression-webpack-plugin": "6.1.1",
 		"husky": "4.3.8",
 		"lint-staged": "^11.0.0",
 		"prettier": "^2.2.1",
