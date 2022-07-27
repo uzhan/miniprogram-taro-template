@@ -21,8 +21,8 @@ interface RequestOptions {
   data?: any;
 }
 
-const request = (options: RequestOptions) => {
-  return new Promise<RequestResponse>((resolve, reject) => {
+const request = function <T = any>(options: RequestOptions): Promise<API.Response<T>> {
+  return new Promise((resolve, reject) => {
     const Authorization = Taro.getStorageSync('token');
     const member_id = Taro.getStorageSync('member_id');
     Object.assign(options.header || {}, {

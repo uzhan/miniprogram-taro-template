@@ -16,9 +16,11 @@ declare module 'react-cup-ui';
 declare module 'taro3-code';
 declare const REACT_APP_ASSETS_API: string;
 declare const REACT_APP_BASE_API: string;
-declare interface RequestResponse {
-  infocode?: string;
-  code: string;
-  data: any;
-  message: string;
+
+declare namespace API {
+  interface Response<T = any> {
+    code: string;
+    data: T;
+    message: string;
+  }
 }
