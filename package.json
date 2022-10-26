@@ -28,7 +28,7 @@
 		"dev:qq": "npm run build:qq -- --watch",
 		"dev:jd": "npm run build:jd -- --watch",
 		"dev:quickapp": "npm run build:quickapp -- --watch",
-		"lint": "npm run lint:fix && npm run lint:js && npm run lint:style && npm run prettier",
+		"lint": "npm run lint:fix && npm run prettier",
 		"lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
 		"lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
 		"lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
