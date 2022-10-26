@@ -1,36 +1,22 @@
 import Taro from '@tarojs/taro';
-
-let APPID: string;
-
-if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
-  const { miniProgram } = Taro.getAccountInfoSync();
-  APPID = miniProgram.appId;
-}
-if (Taro.getEnv() === Taro.ENV_TYPE.ALIPAY) {
-  // @ts-ignore
-  APPID = my.getAppIdSync().appId;
-}
-
-if (Taro.getEnv() === Taro.ENV_TYPE.WEB) APPID = '';
+import { getAppid } from './index';
 
 interface RequestOptions {
   BASE_URL?: string;
   url: string;
-  header?: Taro.General.IAnyObject;
-  method?: string;
+  header?: TaroGeneral.IAnyObject;
+  method?: keyof globalThis.Taro.request.Method;
   data?: any;
 }
 
 const request = function <T = any>(options: RequestOptions): Promise<API.Response<T>> {
   return new Promise((resolve, reject) => {
     const Authorization = Taro.getStorageSync('token');
-    const member_id = Taro.getStorageSync('member_id');
     Object.assign(options.header || {}, {
-      appid: APPID,
+      appid: getAppid(),
       'app-type': Taro.getEnv(),
       'content-type': 'application/json',
       Authorization: `Bearer ${Authorization}`,
-      'member-id': member_id || '2',
     });
     Taro.request({
       url: `${options.BASE_URL || REACT_APP_BASE_API}${options.url}`,

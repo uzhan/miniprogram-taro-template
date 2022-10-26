@@ -8,14 +8,14 @@ import Taro from '@tarojs/taro';
  * @param {number} subGroupLength 单数组长度
  * @returns []
  */
-export function arrGroup(array: any[], subGroupLength: number) {
+const arrGroup = (array: any[], subGroupLength: number) => {
   let index = 0;
   const newArray = [];
   while (index < array.length) {
     newArray.push(array.slice(index, (index += subGroupLength)));
   }
   return newArray;
-}
+};
 
 /**
  * 图片上传
@@ -24,7 +24,7 @@ export function arrGroup(array: any[], subGroupLength: number) {
  * @param {object} header 上传接口header头
  * @returns {string} 文件上传地址
  */
-export const uploadImage = (filePath: string, url?: string, header?: any) => {
+const uploadImage = (filePath: string, url?: string, header?: any) => {
   const Authorization = Taro.getStorageSync('token');
   const member_id = Taro.getStorageSync('member_id');
   return new Promise<string>((resolve, reject) => {
@@ -117,7 +117,7 @@ const downloadImgToAlbum = (qrCodePath: string) => {
  * 小程序保存图片到相册
  * @param url 图片地址
  */
-export const DownloadImage = (url: string) => {
+const DownloadImage = (url: string) => {
   const qrCodePath = url;
   Taro.getSetting({
     success(res) {
@@ -153,7 +153,7 @@ export const DownloadImage = (url: string) => {
  * @author BaiHuaYang
  * @param {string} image 图片地址
  */
-export const H5DownloadImage = (image: string) => {
+const H5DownloadImage = (image: string) => {
   const blob = new Blob([''], { type: 'application/octet-stream' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -180,4 +180,40 @@ export const H5DownloadImage = (image: string) => {
   );
   a.dispatchEvent(e);
   URL.revokeObjectURL(url);
+};
+
+/**
+ * @description 获取小程序APPId
+ * @author BaiHuaYang
+ * @export
+ * @return {string} appid
+ */
+const getAppid = (): string => {
+  const appid = Taro.getStorageSync('appid');
+  if (appid) return appid;
+  else {
+    if (Taro.getEnv() === Taro.ENV_TYPE.WEAPP) {
+      const { miniProgram } = Taro.getAccountInfoSync();
+      Taro.setStorageSync('appid', miniProgram.appId);
+      return miniProgram.appId;
+    }
+    if (Taro.getEnv() === Taro.ENV_TYPE.ALIPAY) {
+      Taro.setStorageSync('appid', (my.getAppIdSync() as any).appId);
+      return (my.getAppIdSync() as any).appId;
+    }
+
+    if (Taro.getEnv() === Taro.ENV_TYPE.WEB) return '';
+  }
+
+  return '';
+};
+
+export {
+  arrGroup,
+  uploadImage,
+  downloadHttpImg,
+  downloadImgToAlbum,
+  DownloadImage,
+  H5DownloadImage,
+  getAppid,
 };

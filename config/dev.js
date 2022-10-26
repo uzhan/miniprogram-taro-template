@@ -8,5 +8,6 @@ module.exports = {
   mini: {},
   h5: {
     esnextModules: ['taro-ui']
-  }
+  },
+  isWatch: true,
 }
